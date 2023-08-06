@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Multiplayer"
+    android:background="@color/app_back"
+    android:padding="20dp"
+    android:paddingTop="50dp">
+
+    <TextView
+        android:id="@+id/icon1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/x_icon"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="15dp"/>
+
+    <TextView
+        android:id="@+id/icon2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/o_icon"
+        android:backgroundTint="#E8125B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="15dp"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/racing_sans_one"
+        android:letterSpacing="0.02"
+        android:text="@string/player1"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_500"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/icon1"
+        app:layout_constraintStart_toStartOf="@+id/icon1"
+        app:layout_constraintTop_toBottomOf="@+id/icon1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.02"
+        android:fontFamily="@font/racing_sans_one"
+        android:text="@string/player2"
+        android:textColor="#E8125B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="@+id/icon2"
+        app:layout_constraintStart_toStartOf="@+id/icon2"
+        app:layout_constraintTop_toBottomOf="@+id/icon2" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/score"
+        android:textSize="40sp"
+        android:textColor="@color/text"
+        android:gravity="center"
+        android:background="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon1"
+        app:layout_constraintEnd_toStartOf="@id/icon2"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/board"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/ic_grid"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/gridlines"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <LinearLayout
+        android:id="@+id/board_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:paddingVertical="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/board"
+        app:layout_constraintEnd_toEndOf="@+id/board"
+        app:layout_constraintStart_toStartOf="@+id/board"
+        app:layout_constraintTop_toTopOf="@+id/board">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="0"
+                tools:ignore="NestedWeights"
+                android:contentDescription="@string/icon" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="1" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="3"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="4" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="6" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="7" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="playerTap"
+                android:padding="20sp"
+                android:tag="8" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reset"
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintTop_toBottomOf="@+id/board_layout" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/primary_btn"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/main_menu"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:onClick="gotoHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/primary_btn"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/play_again"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:onClick="gameReset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

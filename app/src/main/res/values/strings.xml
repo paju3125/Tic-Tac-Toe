@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="gridlines">gridlines</string>
+    <string name="icon">Icon</string>
+    <string name="score">0 : 0</string>
+
+    <string name="ai_turn">Bot\'s Turn</string>
+    <string name="human_turn">Your Turn</string>
+    <string name="ai_win">Bot Win</string>
+    <string name="human_win">You Win</string>
+    <string name="draw">Match Draw</string>
+
+    //main menu button
+    <string name="ai_btn">Single PLayer</string>
+    <string name="human_btn">Multiplayer</string>
+
+    //main game button
+    <string name="home">Home</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="play_again">Play Again</string>
+
+    //players
+    <string name="ai">Bot</string>
+    <string name="player">Player</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+
+</resources>

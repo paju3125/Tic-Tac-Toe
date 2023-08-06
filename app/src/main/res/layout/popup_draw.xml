@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:cardCornerRadius="20dp"
+        android:background="@drawable/popup_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pop_back"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:src="@drawable/trophy_back"
+                android:translationX="-10dp"
+                android:contentDescription="popup background"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/trophy"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/sad"
+                android:translationY="80dp"
+                android:contentDescription="sad"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/racing_sans_one"
+                android:text="@string/draw"
+                android:textColor="@color/draw_text"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pop_back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text">
+
+                <Button
+                    android:id="@+id/popup_home"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/lose_button"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="@string/home"
+                    android:textSize="16sp"
+                    android:onClick="gotoHome" />
+
+                <Button
+                    android:id="@+id/popup_reset"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/lose_button"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="@string/play_again"
+                    android:onClick="gameReset"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
